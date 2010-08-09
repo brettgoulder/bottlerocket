@@ -37,6 +37,15 @@ describe ContentType do
   it "should find all entities" do
     test_content_types.pages.find(:title => "Test").should_not be_empty
   end
+  
+  it "should update an entity in the database" do
+    page = test_content_types.pages.find(:title => "Test").first
+    page.title = "Bananas"
+    page.update
+    page = test_content_types.pages.find_by_id(page._id)
+    page.title.should == "Bananas"
+  end
+  
 end
 
 describe Entity do
