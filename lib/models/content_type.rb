@@ -22,9 +22,11 @@ class ContentType < SimpleStruct
   def create(attrs)
     find_by_id collection.insert(attrs)
   end
-  
-  def update(*args)
-    collection.update(:_id => object_id, attributes)
+   
+  def update(attrs)
+    a = attrs.dup
+    a.delete :content_type
+    collection.update({:_id => object_id(a[:_id])}, a)
   end
   
   def find_by_id(id)
@@ -39,6 +41,14 @@ class ContentType < SimpleStruct
   
   def find(*args)
     collection.find(*args).collect { |attrs| Entity.new attrs.merge(:content_type => self) }
+  end
+  
+  def object_id(id)
+    if id.is_a? String
+      ObjectID.from_string(id)
+    else
+      id
+    end
   end
   
 end
