@@ -5,6 +5,11 @@ describe Generator do
     @dir = "test_bottlerocket"
     FileUtils.rm_r(@dir) if File.exists?(@dir)
   end
+  
+  after :each do
+    FileUtils.rm_r(@dir) if File.exists?(@dir)
+  end
+  
   it "should create the directory" do
     Generator.new(@dir).create_directory
     File.exists?(@dir).should be_true

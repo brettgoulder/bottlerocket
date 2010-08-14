@@ -1,0 +1,3 @@
+%ul
+  - @content_types.each do |content_type|
+    %li= link_to content_type.title, admin_path(content_type.name)

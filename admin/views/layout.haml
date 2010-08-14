@@ -1,1 +1,15 @@
-Test
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    
+    /[if IE]
+      %script{:src => " http://html5shiv.googlecode.com/svn/trunk/html5.js"}
+      
+    %title Bottlerocket
+    %link{:rel => "stylesheet", :href => "/admin/stylesheets/screen.css"}
+    
+  %body{:id => @page_id || ''}
+    %section#content
+      = yield
+      

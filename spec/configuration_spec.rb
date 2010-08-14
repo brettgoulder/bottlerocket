@@ -8,4 +8,8 @@ describe Configuration do
   it "should have a database name" do
     Configuration.instance.database_name.should == "test"
   end
+  
+  it "should return a set of content types" do
+    Configuration.instance.content_types.should_not be_empty
+  end
 end

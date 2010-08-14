@@ -8,6 +8,10 @@ class Configuration
     @attrs ||= YAML.load_file config_file_location
   end
   
+  def content_types
+    @content_types ||= ContentTypes.load(content_types_file)
+  end
+  
   def find(name)
     attrs[name]
   end

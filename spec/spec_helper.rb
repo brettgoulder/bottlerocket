@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spec'
+require 'rack/test'
 require File.dirname(__FILE__) + '/../lib/bottlerocket'
 
 Configuration.instance.config_file_location = File.dirname(__FILE__) + '/config_test.yaml'

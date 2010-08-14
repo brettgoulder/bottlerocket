@@ -1,0 +1,8 @@
+%h1= @content_type.title
+%ul
+  - @content_type.all.each do |entity|
+    %li
+      - entity.attributes.each do |label, value|
+        %label= label.humanize
+        %span.value
+          &= value

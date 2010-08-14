@@ -43,6 +43,8 @@ class ContentType < SimpleStruct
     collection.find(*args).collect { |attrs| Entity.new attrs.merge(:content_type => self) }
   end
   
+  alias_method :all, :find
+  
   def object_id(id)
     if id.is_a? String
       ObjectID.from_string(id)

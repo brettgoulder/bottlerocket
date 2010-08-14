@@ -1,1 +1,2 @@
 database_name: test
+content_types_file: content_types.yaml

@@ -1,0 +1,10 @@
+- form_tag(admin_path("#{@content_type.name}/new")) do
+  %ul
+    - @content_type.fields.each do |f|
+      - field, value = f.keys.first, f.values.first
+      %li
+        = label_tag field
+        = text_field_tag "entity[#{field}]"
+    %li
+      = submit_tag "Save #{@content_type.title}"
+  

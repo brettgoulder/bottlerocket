@@ -2,6 +2,8 @@ require 'rubygems'
 require 'sinatra'
 require 'bottlerocket'
 
+Configuration.instance.config_file_location = File.dirname(__FILE__) + '/bottlerocket.yaml'
+
 set :run, false
 
 app = Rack::Builder.new do

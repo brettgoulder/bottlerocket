@@ -9,6 +9,10 @@ class ContentTypes
     self.content_types = YAML.load_file(content_types_yaml).collect { |attrs| ContentType.new(attrs) }
   end
   
+  def all
+    content_types
+  end
+  
   def length
     content_types.length
   end
