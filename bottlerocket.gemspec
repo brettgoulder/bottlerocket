@@ -15,18 +15,23 @@ Gem::Specification.new do |s|
   s.email = %q{brett.goulder@gmail.com}
   s.executables = ["bottlerocket"]
   s.extra_rdoc_files = [
-    "README.markdown"
+    "LICENSE",
+     "README.markdown"
   ]
   s.files = [
     ".bundle/config",
      ".gitignore",
      "Gemfile",
+     "LICENSE",
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "admin/views/layout.haml",
+     "admin/views/stylesheets/screen.sass",
      "bin/bottlerocket",
      "bottlerocket.gemspec",
      "lib/bottlerocket.rb",
+     "lib/bottlerocket/bottlerocket_admin.rb",
      "lib/bottlerocket/generator.rb",
      "lib/bottlerocket/has_connection.rb",
      "lib/bottlerocket/models/configuration.rb",
@@ -41,7 +46,10 @@ Gem::Specification.new do |s|
      "spec/generator_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
-     "template/README.markdown"
+     "template/Gemfile",
+     "template/README.markdown",
+     "template/bottlerocket.yaml",
+     "template/config.ru"
   ]
   s.homepage = %q{http://github.com/brettgoulder/bottlerocket}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -63,17 +71,23 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<activesupport>, [">= 2.3.8"])
       s.add_runtime_dependency(%q<mongo>, [">= 1.0.7"])
       s.add_runtime_dependency(%q<jeweler>, [">= 1.4.0"])
+      s.add_runtime_dependency(%q<sinatra>, [">= 1.0"])
+      s.add_runtime_dependency(%q<sinatra_more>, [">= 0.3.40"])
       s.add_development_dependency(%q<rspec>, ["= 1.3.0"])
     else
       s.add_dependency(%q<activesupport>, [">= 2.3.8"])
       s.add_dependency(%q<mongo>, [">= 1.0.7"])
       s.add_dependency(%q<jeweler>, [">= 1.4.0"])
+      s.add_dependency(%q<sinatra>, [">= 1.0"])
+      s.add_dependency(%q<sinatra_more>, [">= 0.3.40"])
       s.add_dependency(%q<rspec>, ["= 1.3.0"])
     end
   else
     s.add_dependency(%q<activesupport>, [">= 2.3.8"])
     s.add_dependency(%q<mongo>, [">= 1.0.7"])
     s.add_dependency(%q<jeweler>, [">= 1.4.0"])
+    s.add_dependency(%q<sinatra>, [">= 1.0"])
+    s.add_dependency(%q<sinatra_more>, [">= 0.3.40"])
     s.add_dependency(%q<rspec>, ["= 1.3.0"])
   end
 end
