@@ -39,6 +39,6 @@ class BottlerocketAdmin < Sinatra::Application
   
   post '/:handle' do |handle|
     Configuration.instance.content_types.find(handle).create params[:entity]
-    redirect "/#{handle}"
+    redirect admin_path(handle)
   end
 end

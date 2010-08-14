@@ -26,6 +26,9 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "admin/views/entities.haml",
+     "admin/views/entity.haml",
+     "admin/views/index.haml",
      "admin/views/layout.haml",
      "admin/views/stylesheets/screen.sass",
      "bin/bottlerocket",
@@ -39,6 +42,7 @@ Gem::Specification.new do |s|
      "lib/bottlerocket/models/content_types.rb",
      "lib/bottlerocket/models/entity.rb",
      "lib/bottlerocket/simple_struct.rb",
+     "spec/bottlerocket_admin_spec.rb",
      "spec/config_test.yaml",
      "spec/configuration_spec.rb",
      "spec/content_spec.rb",
@@ -49,7 +53,8 @@ Gem::Specification.new do |s|
      "template/Gemfile",
      "template/README.markdown",
      "template/bottlerocket.yaml",
-     "template/config.ru"
+     "template/config.ru",
+     "template/content_types.yaml"
   ]
   s.homepage = %q{http://github.com/brettgoulder/bottlerocket}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -57,7 +62,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{The fastest CMS in a bottle}
   s.test_files = [
-    "spec/configuration_spec.rb",
+    "spec/bottlerocket_admin_spec.rb",
+     "spec/configuration_spec.rb",
      "spec/content_spec.rb",
      "spec/generator_spec.rb",
      "spec/spec_helper.rb"
