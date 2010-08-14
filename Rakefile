@@ -10,6 +10,8 @@ begin
     gemspec.add_dependency 'activesupport', '>= 2.3.8'
     gemspec.add_dependency 'mongo', '>= 1.0.7'
     gemspec.add_dependency 'jeweler', '>= 1.4.0'
+    gemspec.add_dependency 'sinatra', '>= 1.0'
+    gemspec.add_dependency 'sinatra_more', '>= 0.3.40'
     
     gemspec.add_development_dependency 'rspec', '1.3.0'
   end
