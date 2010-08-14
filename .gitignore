@@ -2,3 +2,5 @@
 sinatra.log
 .sass_cache
 Gemfile.lock
+pkg
+test_bottlerocket

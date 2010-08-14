@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "bin/bottlerocket",
      "bottlerocket.gemspec",
+     "lib/bottlerocket.rb",
      "lib/generator.rb",
      "lib/has_connection.rb",
      "lib/models/configuration.rb",

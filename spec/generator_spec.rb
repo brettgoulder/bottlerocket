@@ -1,7 +1,5 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-require File.dirname(__FILE__) + '/../lib/generator'
-
 describe Generator do
   before :each do
     @dir = "test_bottlerocket"
