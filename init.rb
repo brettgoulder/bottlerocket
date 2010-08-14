@@ -1,7 +1,7 @@
 require 'yaml'
-require 'active_support'
+require 'activesupport'
 require 'mongo'
-
+require 'fileutils'
 require File.dirname(__FILE__) + '/lib/simple_struct'
 require File.dirname(__FILE__) + '/lib/models/configuration'
 require File.dirname(__FILE__) + '/lib/models/content_types'

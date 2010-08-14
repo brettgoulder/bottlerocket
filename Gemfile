@@ -1,4 +1,5 @@
 source :gemcutter
 
-gem "active_support"
+gem "activesupport"
 gem "mongo"
+gem "jeweler"
