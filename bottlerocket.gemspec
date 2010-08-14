@@ -22,7 +22,11 @@ Gem::Specification.new do |s|
      ".gitignore",
      "Gemfile",
      "README.markdown",
-     "init.rb",
+     "Rakefile",
+     "VERSION",
+     "bin/bottlerocket",
+     "bottlerocket.gemspec",
+     "lib/generator.rb",
      "lib/has_connection.rb",
      "lib/models/configuration.rb",
      "lib/models/content_type.rb",
@@ -33,8 +37,10 @@ Gem::Specification.new do |s|
      "spec/configuration_spec.rb",
      "spec/content_spec.rb",
      "spec/content_type_test.yaml",
+     "spec/generator_spec.rb",
      "spec/spec.opts",
-     "spec/spec_helper.rb"
+     "spec/spec_helper.rb",
+     "template/README.markdown"
   ]
   s.homepage = %q{http://github.com/brettgoulder/bottlerocket}
   s.rdoc_options = ["--charset=UTF-8"]

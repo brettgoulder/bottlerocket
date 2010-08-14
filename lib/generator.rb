@@ -1,3 +1,5 @@
+require 'fileutils'
+
 class Generator
   attr_accessor :dir
   def initialize(dir)
@@ -9,6 +11,6 @@ class Generator
   end
   
   def copy_template
-    FileUtils.cp_r(File.dirname(__FILE__) + '/../template/', dir)
+    FileUtils.cp_r(File.dirname(__FILE__) + '/../template/.', dir)
   end
 end
