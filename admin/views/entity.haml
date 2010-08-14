@@ -1,4 +1,4 @@
-- form_tag(admin_path("#{@content_type.name}/new")) do
+- form_tag(admin_path("#{@content_type.name}")) do
   %ul
     - @content_type.fields.each do |f|
       - field, value = f.keys.first, f.values.first
