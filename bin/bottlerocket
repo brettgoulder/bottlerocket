@@ -4,7 +4,6 @@ require File.dirname(__FILE__) + '/../lib/bottlerocket/generator'
 
 if ARGV.empty?
   STDERR.puts %{
-Yo!  Bottlerocket requires an argument you dickhead!
 example: bottlerocket my_shiny_new_site
   }
 else

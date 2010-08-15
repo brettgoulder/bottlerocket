@@ -30,7 +30,7 @@ class ContentType < SimpleStruct
   end
   
   def find_by_id(id)
-    find_one :_id => id
+    find_one :_id => object_id(id)
   end
   
   def find_one(*args)

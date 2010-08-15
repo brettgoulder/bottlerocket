@@ -1,3 +1,7 @@
+require 'rubygems'
+gem 'rspec'
+require 'spec/rake/spectask'
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
@@ -17,4 +21,12 @@ begin
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"
+end
+
+task :default => :spec
+
+desc "Run specs"
+Spec::Rake::SpecTask.new do |t|
+  t.spec_files = FileList['spec/**/*_spec.rb']
+  t.spec_opts = %w(-fs --color --backtrace)
 end

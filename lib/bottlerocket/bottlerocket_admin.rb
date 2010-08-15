@@ -37,6 +37,12 @@ class BottlerocketAdmin < Sinatra::Application
     haml :entity
   end
   
+  get '/:handle/:id' do |handle, id|
+    @content_type = Configuration.instance.content_types.find_by_id(id)
+    p @content_type
+    haml :show
+  end
+  
   post '/:handle' do |handle|
     Configuration.instance.content_types.find(handle).create params[:entity]
     redirect admin_path(handle)

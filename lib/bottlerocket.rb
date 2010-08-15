@@ -1,5 +1,5 @@
 require 'yaml'
-require 'activesupport'
+require 'active_support'
 require 'mongo'
 require 'fileutils'
 require File.dirname(__FILE__) + '/bottlerocket/simple_struct'

@@ -39,4 +39,16 @@ describe "Bottlerocket Admin" do
     Configuration.instance.content_types.pages.find_one(:title => "Rabbits are here").should_not be_nil
   end
   
+  describe "SHOW, EDIT, UPDATE and DELETE actions" do
+    before(:each) do
+      Configuration.instance.content_types.pages.create :title => "This is a test page", :body => "It has a body"
+      @page = Configuration.instance.content_types.pages.find_one(:title => "This is a test page")
+    end
+    
+    it "should SHOW when you get GET /pages/1" do
+      get "/pages/#{@page._id}"
+      last_response.should be_ok
+      last_response.body.should include("This is a test page")
+    end
+  end
 end
