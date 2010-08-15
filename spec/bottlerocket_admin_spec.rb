@@ -50,5 +50,6 @@ describe "Bottlerocket Admin" do
       last_response.should be_ok
       last_response.body.should include("This is a test page")
     end
+
   end
 end

@@ -38,8 +38,7 @@ class BottlerocketAdmin < Sinatra::Application
   end
   
   get '/:handle/:id' do |handle, id|
-    @content_type = Configuration.instance.content_types.find_by_id(id)
-    p @content_type
+    @content_type = Configuration.instance.content_types.find(handle).find_by_id(id)
     haml :show
   end
   
