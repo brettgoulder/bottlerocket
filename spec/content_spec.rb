@@ -46,6 +46,11 @@ describe ContentType do
     page.title.should == "Bananas"
   end
   
+  it "should find by id" do
+    page = test_content_types.pages.find(:title => "Test").first
+    page = test_content_types.pages.find_by_id(page._id)
+    page.title.should == "Test"
+  end
 end
 
 describe Entity do
