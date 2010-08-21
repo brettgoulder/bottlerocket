@@ -29,6 +29,10 @@ class ContentType < SimpleStruct
     collection.update({:_id => object_id(a[:_id])}, a)
   end
   
+  def remove(attrs)
+    collection.remove(attrs)
+  end
+  
   def find_by_id(id)
     find_one :_id => object_id(id)
   end

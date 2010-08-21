@@ -51,6 +51,14 @@ describe ContentType do
     page = test_content_types.pages.find_by_id(page._id)
     page.title.should == "Test"
   end
+  
+  it "should remove an item from the collection" do
+    page = test_content_types.pages.find(:title => "Test").first
+    page.attributes.should_not be_empty
+    test_content_types.pages.remove(:_id => page._id)
+    page = test_content_types.pages.find_by_id(page._id)
+    page.attributes.should be_empty
+  end
 end
 
 describe Entity do

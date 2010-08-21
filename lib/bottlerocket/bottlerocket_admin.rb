@@ -34,14 +34,26 @@ class BottlerocketAdmin < Sinatra::Application
   
   get '/:handle/new' do |handle|
     @content_type = Configuration.instance.content_types.find(handle)
-    haml :entity
+    @entity = SimpleStruct.new
+    haml :entity, :locals => {:form_name => "New Form"}
+  end
+  
+  get '/:handle/:id/edit' do |handle, id|
+    @content_type = Configuration.instance.content_types.find(handle)
+    @entity = Configuration.instance.content_types.find(handle).find_by_id(id)
+    haml :entity, :locals => {:form_name => "Edit Form"}
+  end
+  
+  get '/:handle/:id/delete' do |handle, id|
+    Configuration.instance.content_types.find(handle).remove(:_id => id)
+    redirect admin_path(handle)
   end
   
   get '/:handle/:id' do |handle, id|
-    @content_type = Configuration.instance.content_types.find(handle).find_by_id(id)
+    @entity = Configuration.instance.content_types.find(handle).find_by_id(id)
     haml :show
   end
-  
+    
   post '/:handle' do |handle|
     Configuration.instance.content_types.find(handle).create params[:entity]
     redirect admin_path(handle)

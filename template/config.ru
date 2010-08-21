@@ -10,6 +10,10 @@ app = Rack::Builder.new do
   map '/admin' do
     run BottlerocketAdmin
   end
+  
+  map '/' do
+    run Site
+  end
 end.to_app
 
 log = File.new("sinatra.log", "a")

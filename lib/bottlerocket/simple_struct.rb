@@ -1,7 +1,7 @@
 class SimpleStruct
   attr_accessor :attributes
   
-  def initialize(attributes)
+  def initialize(attributes={})
     self.attributes = attributes
   end
   

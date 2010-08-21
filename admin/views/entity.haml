@@ -1,10 +1,11 @@
+%h1= form_name
 - form_tag(admin_path("#{@content_type.name}")) do
   %ul
     - @content_type.fields.each do |f|
       - field, value = f.keys.first, f.values.first
       %li
         = label_tag field
-        = text_field_tag "entity[#{field}]"
+        = text_field_tag "entity[#{field}]", :value => @entity.attributes[field]
     %li
       = submit_tag "Save #{@content_type.title}"
   

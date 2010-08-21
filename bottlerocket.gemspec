@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brett Goulder", "Carl Woodward"]
-  s.date = %q{2010-08-14}
+  s.date = %q{2010-08-21}
   s.default_executable = %q{bottlerocket}
   s.description = %q{A Sinatra/Mongo based content management system written by an American and a dude with an Afro}
   s.email = %q{brett.goulder@gmail.com}
@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
      "admin/views/entity.haml",
      "admin/views/index.haml",
      "admin/views/layout.haml",
+     "admin/views/show.haml",
      "admin/views/stylesheets/screen.sass",
      "bin/bottlerocket",
      "bottlerocket.gemspec",

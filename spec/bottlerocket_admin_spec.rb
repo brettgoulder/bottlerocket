@@ -45,10 +45,25 @@ describe "Bottlerocket Admin" do
       @page = Configuration.instance.content_types.pages.find_one(:title => "This is a test page")
     end
     
-    it "should SHOW when you get GET /pages/1" do
+    it "should show SHOW when you get GET /pages/1" do
       get "/pages/#{@page._id}"
       last_response.should be_ok
       last_response.body.should include("This is a test page")
+    end
+    
+    it "should show EDIT when you GET /pages/1/edit" do
+      get "/pages/#{@page._id}/edit"
+      @page.attributes.is_a?(HashWithIndifferentAccess).should be_true
+      last_response.should be_ok
+      last_response.body.should include("Edit")
+      last_response.body.should include("This is a test page")
+    end
+    
+    it "should DESTROY when you GET /pages/1/delete" do
+      id = @page._id
+      get "/pages/#{@page._id}/delete"
+      @page = Configuration.instance.content_types.pages.find_by_id(:_id => id)
+      @page.attributes.should be_empty
     end
 
   end
