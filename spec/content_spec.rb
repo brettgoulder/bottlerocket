@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/spec_helper'
+require 'spec_helper'
 
 describe ContentTypes do
   it "should load up a content types yaml" do
@@ -47,18 +47,22 @@ describe ContentType do
   end
   
   it "should find by id" do
+    test_content_types.pages.create :title => "Test", :body => "Page"
     page = test_content_types.pages.find(:title => "Test").first
     page = test_content_types.pages.find_by_id(page._id)
     page.title.should == "Test"
   end
   
-  it "should remove an item from the collection" do
+  it "should remove an entity from the collection" do
+    test_content_types.pages.create :title => "Test", :body => "Page"
     page = test_content_types.pages.find(:title => "Test").first
     page.attributes.should_not be_empty
     test_content_types.pages.remove(:_id => page._id)
     page = test_content_types.pages.find_by_id(page._id)
-    page.attributes.should be_empty
+    page.attributes.should be_blank
   end
+  
+  
 end
 
 describe Entity do

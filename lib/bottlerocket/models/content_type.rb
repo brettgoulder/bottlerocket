@@ -26,7 +26,7 @@ class ContentType < SimpleStruct
   def update(attrs)
     a = attrs.dup
     a.delete :content_type
-    collection.update({:_id => object_id(a[:_id])}, a)
+    collection.update({:_id => mongo_object_id(a[:_id])}, a)
   end
   
   def remove(attrs)
@@ -34,7 +34,7 @@ class ContentType < SimpleStruct
   end
   
   def find_by_id(id)
-    find_one :_id => object_id(id)
+    find_one :_id => mongo_object_id(id)
   end
   
   def find_one(*args)
@@ -49,7 +49,7 @@ class ContentType < SimpleStruct
   
   alias_method :all, :find
   
-  def object_id(id)
+  def mongo_object_id(id)
     if id.is_a? String
       ObjectID.from_string(id)
     else

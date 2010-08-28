@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brett Goulder", "Carl Woodward"]
-  s.date = %q{2010-08-21}
+  s.date = %q{2010-08-22}
   s.default_executable = %q{bottlerocket}
   s.description = %q{A Sinatra/Mongo based content management system written by an American and a dude with an Afro}
   s.email = %q{brett.goulder@gmail.com}
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "admin/views/edit.haml",
      "admin/views/entities.haml",
      "admin/views/entity.haml",
      "admin/views/index.haml",
@@ -55,7 +56,8 @@ Gem::Specification.new do |s|
      "template/README.markdown",
      "template/bottlerocket.yaml",
      "template/config.ru",
-     "template/content_types.yaml"
+     "template/content_types.yaml",
+     "template/site.rb"
   ]
   s.homepage = %q{http://github.com/brettgoulder/bottlerocket}
   s.rdoc_options = ["--charset=UTF-8"]
