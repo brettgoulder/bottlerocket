@@ -13,6 +13,7 @@ describe "Bottlerocket Admin" do
     last_response.should be_ok
     last_response.body.should include("Pages")
   end
+  
   describe "Listing entities" do
     before do
       Configuration.instance.content_types.pages.create :title => "This is a test page", :body => "It has a body"
