@@ -1,0 +1,2 @@
+database_name: test
+content_types_file: spec/content_type_test.yaml
