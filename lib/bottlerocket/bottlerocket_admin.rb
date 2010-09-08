@@ -24,7 +24,6 @@ class BottlerocketAdmin < Sinatra::Application
   
   get '/' do
     @content_types = Configuration.instance.content_types.all
-    puts @content_types
     haml :index
   end
   
