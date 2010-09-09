@@ -23,4 +23,5 @@ class Configuration
       super(field, *args)
     end
   end
+  
 end

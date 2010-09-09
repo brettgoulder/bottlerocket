@@ -40,7 +40,11 @@ class ContentType < SimpleStruct
   def find_one(*args)
     result = collection.find_one(*args)
     result.merge!({:content_type => self}) if result.present?
-    Entity.new result
+    if result.nil? or result.empty?
+      nil
+    else
+      Entity.new result
+    end
   end
   
   def find(*args)
@@ -51,7 +55,7 @@ class ContentType < SimpleStruct
   
   def mongo_object_id(id)
     if id.is_a? String
-      ObjectID.from_string(id)
+      BSON::ObjectId.from_string(id)
     else
       id
     end

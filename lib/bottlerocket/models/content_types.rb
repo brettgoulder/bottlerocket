@@ -22,14 +22,10 @@ class ContentTypes
   end
   
   def method_missing(field, *args)
-    begin
-      if find field.to_s.ends_with?('=')
-        field.to_s = args.first
-      else
-        find field.to_s
-      end
-    rescue
-      raise MethodNotFound
+    if find field.to_s.end_with?('=')
+      field.to_s = args.first
+    else
+      find field.to_s
     end
   end
 end

@@ -11,7 +11,7 @@ class SimpleStruct
   
   def method_missing(field, *args)
     begin
-      if field.to_s.ends_with?('=')
+      if field.to_s.end_with?('=')
         field_name = field.to_s.sub '=', ''
         @attributes[field_name] = args.first
       else
