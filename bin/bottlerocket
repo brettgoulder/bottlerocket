@@ -8,6 +8,5 @@ example: bottlerocket my_shiny_new_site
   }
 else
   generator = Generator.new(ARGV.first)
-  generator.create_directory
   generator.copy_template
 end
