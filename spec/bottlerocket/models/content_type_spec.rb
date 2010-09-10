@@ -51,4 +51,6 @@ describe ContentType do
     page.should be_nil
   end
   
+  
+  
 end
