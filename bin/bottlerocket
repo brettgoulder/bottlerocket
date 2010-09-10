@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + '/../lib/bottlerocket/generator'
+$:.unshift File.dirname(__FILE__) + "/../lib"
+require 'bottlerocket/generator'
 
 if ARGV.empty?
   STDERR.puts %{
@@ -9,4 +10,5 @@ example: bottlerocket my_shiny_new_site
 else
   generator = Generator.new(ARGV.first)
   generator.copy_template
+  generator.dir_setup
 end

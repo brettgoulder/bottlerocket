@@ -1,1 +1,1 @@
-This is Bottlerocket
+This is Bottlerocket 0.0.4

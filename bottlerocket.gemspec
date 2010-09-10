@@ -3,7 +3,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name = "bottlerocket"
-  gem.version = 0.0.1
+  gem.version = "0.0.3"
   gem.platform = Gem::Platform::RUBY
   gem.authors = ["Brett Goulder", "Carl Woodward"]
   gem.email = "brett.goulder@gmail.com"
@@ -14,9 +14,9 @@ Gem::Specification.new do |gem|
   gem.files = %w(Readme.md Rakefile) + Dir.glob("{admin,bin,lib,template}/**/*")
   gem.require_path = "lib"
   gem.executables = [ 'bottlerocket' ]
-  gem.add_dependency "activesupport", "~> 3.0"
-  gem.add_dependency "sinatra", "~> 1.0"
-  gem.add_dependency "mongo", "~> 1.0.8"
-  gem.add_dependency "sinatra_more", "~> 0.3.4"
-  gem.add_dependency "rspec", "~> 1.3.0"
+  gem.add_dependency "activesupport", "3.0"
+  gem.add_dependency "sinatra", "1.0"
+  gem.add_dependency "mongo", "1.0.8"
+  gem.add_dependency "sinatra_more", "0.3.40"
+  gem.add_dependency "rspec", "1.3.0"
 end
