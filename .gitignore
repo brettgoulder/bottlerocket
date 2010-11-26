@@ -3,3 +3,4 @@ sinatra.log
 .sass_cache
 pkg
 test_bottlerocket
+.bundle/

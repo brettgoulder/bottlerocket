@@ -1,5 +1,4 @@
 require 'rubygems'
-gem 'rspec'
 require 'spec/rake/spectask'
 task :default => :spec
 
