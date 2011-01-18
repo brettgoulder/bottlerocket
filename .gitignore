@@ -4,3 +4,4 @@ sinatra.log
 pkg
 test_bottlerocket
 .bundle/
+*.gem

@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'bottlerocket'
+require File.dirname(__FILE__) + '/site'
 
 Configuration.instance.config_file_location = File.dirname(__FILE__) + '/bottlerocket.yaml'
 
