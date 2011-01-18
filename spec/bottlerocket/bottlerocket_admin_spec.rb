@@ -18,6 +18,12 @@ describe "Bottlerocket Admin" do
       get '/'
       last_response.should be_ok
     end
+    
+    it "should authorize from the hash of users in the config" do
+      authorize 'client', Configuration.instance.users['client']
+      get '/'
+      last_response.should be_ok
+    end
   end
   
   describe "With authorized access" do

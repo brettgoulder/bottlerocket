@@ -18,7 +18,7 @@ class BottlerocketAdmin < Sinatra::Application
   end
   
   use Rack::Auth::Basic do |username, password|
-    [username, password] == ['admin', 'admin']
+    Configuration.instance.users.keys.include?(username) && password == Configuration.instance.users[username]
   end
   
   get "/stylesheets/:file.css" do |file|
