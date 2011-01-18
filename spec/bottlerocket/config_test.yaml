@@ -1,2 +1,5 @@
 database_name: test
 content_types_file: spec/bottlerocket/content_type_test.yaml
+users:
+  admin: admin
+  client: client 
