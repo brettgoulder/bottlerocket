@@ -17,6 +17,10 @@ class BottlerocketAdmin < Sinatra::Application
     end
   end
   
+  use Rack::Auth::Basic do |username, password|
+    [username, password] == ['admin', 'admin']
+  end
+  
   get "/stylesheets/:file.css" do |file|
     content_type 'text/css'
     sass(:"stylesheets/#{file}", :load_paths => ([ File.join(File.dirname(__FILE__), 'views', 'stylesheets') ]))
