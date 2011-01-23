@@ -1,2 +1,4 @@
 database_name: test
+database_host: localhost
+database_port: 27017
 content_types_file: content_types.yaml

@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'spec/rake/spectask'
+require 'rspec/core/rake_task'
 task :default => :spec
 
 desc "Build Bottlerocket"
@@ -8,7 +8,6 @@ task :build do
 end
 
 desc "Run specs"
-Spec::Rake::SpecTask.new do |t|
-  t.spec_files = FileList['spec/**/*_spec.rb']
+RSpec::Core::RakeTask.new do |t|
   t.spec_opts = %w(-fs --color --backtrace)
 end
