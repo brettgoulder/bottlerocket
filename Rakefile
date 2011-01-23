@@ -8,6 +8,8 @@ task :build do
 end
 
 desc "Run specs"
-RSpec::Core::RakeTask.new do |t|
-  t.spec_opts = %w(-fs --color --backtrace)
+task :spec do
+  RSpec::Core::RakeTask.new do |t|
+    t.rspec_opts = %w(-fs --color --backtrace)
+  end
 end
