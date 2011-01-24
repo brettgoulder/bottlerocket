@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency "sinatra", "1.0"
   gem.add_dependency "mongo", "1.0.8"
   gem.add_dependency "sinatra_more", "0.3.40"
+  gem.add_dependency "haml", "3.0.25"
 end
