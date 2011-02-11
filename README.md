@@ -1,5 +1,5 @@
 # Bottle Rocket #
-
+## *Note: This is a work in progress and currently is not working* ##
 Bottlerocket is a Sinatra/Mongo based CMS which aims to ease development times on small sites.  The overall aim is to be able quickly write create your content types in a YAML file and then deploy your site with very little configuration.  
 
 ## Features ##
