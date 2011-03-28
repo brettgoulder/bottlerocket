@@ -1,6 +1,6 @@
 Version 1:
 ✓ Authentication for the admin reading from the config file under users as a hash in yaml.
 ✓ Connecting to a database on another host
-- Defining a beta and a live database/site
+✓ Defining a beta and a live database/site
 - Publishing
 - Handle env variables in order to work with Heroku
