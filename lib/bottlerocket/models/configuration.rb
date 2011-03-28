@@ -12,13 +12,17 @@ class Configuration
     @content_types ||= ContentTypes.load(content_types_file)
   end
   
-  def find(name)
-    attrs[name]
+  def find(db_type, name)
+    attrs[db_type][name]
   end
   
   def method_missing(field, *args)
     begin
-      find field.to_s
+      if field.to_s == 'development' || field.to_s == 'production'
+        @db_type = field.to_s
+      else
+        find(@db_type, field.to_s)
+      end
     rescue
       super(field, *args)
     end
