@@ -16,7 +16,7 @@ class ConnectionHelper
   end
   
   def connection
-    # TODO Brett to return a mongo connection.
+    "mongodb://" + attrs['database_host'] + ":" + attrs['database_port'].to_s + "/" + attrs['database_name']
   end
 end
 

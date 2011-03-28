@@ -1,5 +1,11 @@
 require 'spec_helper'
 
+describe ConnectionHelper do
+  it "should have a connection" do
+    Configuration.instance.development.connection.should == "mongodb://localhost:27017/test"
+  end
+end
+
 describe Configuration do
   it "should not be able to be instanciated" do
     lambda { Configuration.new }.should raise_error
