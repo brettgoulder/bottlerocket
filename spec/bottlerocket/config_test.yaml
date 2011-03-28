@@ -1,17 +1,14 @@
+content_types_file: spec/bottlerocket/content_type_test.yaml
+users:
+  admin: admin
+  client: client
+
 development:
   database_name: test
   database_host: localhost
   database_port: 27017
-  content_types_file: spec/bottlerocket/content_type_test.yaml
-  users:
-    admin: admin
-    client: client 
 
 production:
   database_name: test
   database_host: localhost
   database_port: 27017
-  content_types_file: spec/bottlerocket/content_type_test.yaml
-  users:
-    admin: admin
-    client: client
