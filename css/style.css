@@ -1,0 +1,11 @@
+body { background-color: #4c9bbf; color: white; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  }
+#wrapper { width: 700px; margin: 0 auto; }
+a, a:hover, a:visited { color: white; }
+p { font-size: 14px; font-weight: 300; }
+h1,h2,h3,h4,h5,p { font-family: "Proxima Nova", }
+header h2 { color: #bceaff; text-transform: uppercase; font-size: 11px; font-weight: 200; }
+h3 { padding-top: 20px; padding-bottom: 10px; }
+pre { color: #00628f; background: white; position: relative; right: 14px; width: 240px; font-family: Monaco, monospace; }
+ul li { list-style-type: none;}
+#inner_wrapper { background: url(../images/white_trans.png) 0 0 repeat; border-radius: 20px;padding: 95px 100px;}
+#wrapper { padding: 100px; background: url(../images/bubbles.png) 0 0 repeat; }
