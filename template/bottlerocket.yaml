@@ -1,4 +1,14 @@
-database_name: test
-database_host: localhost
-database_port: 27017
-content_types_file: content_types.yaml
+content_types_file: spec/bottlerocket/content_type_test.yaml
+users:
+  admin: admin
+  client: client
+
+development:
+  database_name: bottlerocket_development
+  database_host: localhost
+  database_port: 27017
+
+production:
+  database_name: bottlerocket_production
+  database_host: localhost
+  database_port: 27017

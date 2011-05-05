@@ -3,7 +3,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name = "bottlerocket"
-  gem.version = "0.0.6"
+  gem.version = "0.0.7"
   gem.platform = Gem::Platform::RUBY
   gem.authors = ["Brett Goulder", "Carl Woodward"]
   gem.email = "brett.goulder@gmail.com"
