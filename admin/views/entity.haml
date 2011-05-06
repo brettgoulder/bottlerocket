@@ -7,5 +7,4 @@
         = label_tag field
         = text_field_tag "entity[#{field}]", :value => @entity.attributes[field]
     %li
-      = submit_tag "Save #{@content_type.title}"
-  
+      = submit_tag "Save #{@content_type.title.singularize.downcase}"

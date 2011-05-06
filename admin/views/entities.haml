@@ -6,3 +6,6 @@
         %label= label.humanize
         %span.value
           &= value
+%a{:href => '/admin/' + @content_type.title.downcase + '/new'} 
+  Create new 
+  = @content_type.title.singularize.downcase
