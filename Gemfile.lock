@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bottlerocket (0.0.5)
+    bottlerocket (0.0.7)
       activesupport (= 3.0)
       haml (= 3.0.25)
       mongo (= 1.0.8)

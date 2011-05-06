@@ -1,4 +1,4 @@
-content_types_file: spec/bottlerocket/content_type_test.yaml
+content_types_file: content_type_test.yaml
 users:
   admin: admin
   client: client
