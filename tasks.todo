@@ -4,3 +4,5 @@ Version 1:
 ✓ Defining a beta and a live database/site
 - Publishing
 - Handle env variables in order to work with Heroku
+- Hooking s3 into the bottlerocket to support images
+- Form styling (make sure the forms match the content types)
